@@ -2,9 +2,9 @@ console.log('conditionals');
 
 /* 
 if (salyga) {
-  vygdom jei true
+  vygdom jei salyga === true
 } else {
-  vygdom jei false
+  vygdom jei salyga === false
 }
 
 */
@@ -18,7 +18,7 @@ if (isUserAdmin === true) {
 }
 
 // sukuriam kintamji amzius
-let amzius = -45;
+let amzius;
 
 // priklausomai nuo amziau ispausdinam sugauges arba nesuauges
 // if (amzius > 17) {
@@ -34,7 +34,10 @@ let amzius = -45;
 
 // && - AndAnd'as logine sandauga
 // || - Or'as logine suma
-if (amzius > 0 && amzius < 18) {
+
+if (amzius < 0 || amzius > 150) {
+  console.log('kazkas negerai su amzium', amzius);
+} else if (amzius > 0 && amzius <= 18) {
   console.log('vaikas');
 } else if (amzius < 70) {
   console.log('suauges');
@@ -42,4 +45,13 @@ if (amzius > 0 && amzius < 18) {
   console.log('senjoras');
 } else {
   console.log('kazkas negerai su amzium', amzius);
+}
+
+let age = 40;
+
+if (age > 35) {
+  // some action
+  if (age < 70) {
+    console.log(`${age} yra daugiau uz 35 ir maziau uz 70`);
+  }
 }
